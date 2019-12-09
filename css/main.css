@@ -178,6 +178,11 @@ FIN DE MAPA DE CONTENIDOS */
   src: url(../fonts/vipnagorgialla.ttf);
 }
 
+@font-face {
+  font-family: vipnagorgialla;
+  src: url(../fonts/vipnagorgialla.ttf);
+}
+
 
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -189,7 +194,6 @@ FIN DE MAPA DE CONTENIDOS */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: vipnagorgialla;
 }
 body{
   display: flex;
@@ -198,6 +202,7 @@ body{
   padding: 5rem;
   background: black;
   color:white;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* ---------------------------------------------------------------------------
@@ -220,7 +225,11 @@ body{
                               6.1) =titles:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
-.titleHR{
+.title{
+  font-family: vipnagorgialla;
+  text-transform: uppercase;
+}
+.title1{
   font-size: 5rem;
 }
 
@@ -232,6 +241,7 @@ body{
 --------------------------------------------------------------------------- */
 #demo{
   font-size: 5rem;
+  font-weight: 100;
 }
 
 /* ---------------------------------------------------------------------------
@@ -247,7 +257,7 @@ body{
 .formInputs{
   width: 100%;
   position: relative;
-  height: 50px;
+  height: 60px;
   overflow: hidden;
 }
 
