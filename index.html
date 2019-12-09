@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inteflex</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <div class="skew skew2"></div>
+  <div class="skew skew1"></div>
+
+
+  <h1 class="titleHR">HR</h1>
+  <h2>Novedad Mundial Proximamente</h2>
+  <h3>World Premiere Comming Soon</h3>
+  <p id="demo">27 : 0 : 13 : 17</p>
+
+
+  <div class="yellowContainer">
+    <div class="yellowLine"></div>
+    <div class="yellowLine"></div>
+    <div class="yellowLine"></div>
+  </div>
+
+
+
+  <p>Suscríbete y sé el primero en descubrir la solución más completa de bandejas portacables en acabados de alta resistencia</p>
+  <p>Subscribe and be the first one to discover the most complete solution in high resistence coatings for cable trays</p>
+
+
+  <form action="" class="form">
+
+      <div class="formInputs">
+        <input type="text" name="name" autocomplete="off" required>
+        <label for="name" class="labelName">
+          <span class="contentName">Nombre / name</span>
+        </label>
+      </div>
+
+      <div class="formInputs">
+        <input type="text" name="name" autocomplete="off" required>
+        <label for="name" class="labelName">
+          <span class="contentName">Apellido / Last name</span>
+        </label>
+      </div>
+
+      <div class="formInputs">
+        <input type="text" name="name" autocomplete="off" required>
+        <label for="name" class="labelName">
+          <span class="contentName">Empresa / Company</span>
+        </label>
+      </div>
+
+      <div class="formInputs">
+        <input type="text" name="name" autocomplete="off" required>
+        <label for="name" class="labelName">
+          <span class="contentName">E-mail</span>
+        </label>
+      </div>
+
+      <div class="formInputs">
+        <input type="text" name="name" autocomplete="off" required>
+        <label for="name" class="labelName">
+          <span class="contentName">Teléfono / telephone</span>
+        </label>
+      </div>
+
+      <button type="button" name="button">Enviar / send</button>
+  </form>
+
+
+
+
+  <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2020 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(()=>{
+
+      // Get today's date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days    = Math.floor( distance / (1000 * 60 * 60 * 24));
+      var hours   = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = days + " : " + hours + " : "
+      + minutes + " : " + seconds;
+
+      // If the count down is over, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
