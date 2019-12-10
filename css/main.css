@@ -188,8 +188,10 @@ FIN DE MAPA DE CONTENIDOS */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  z-index: 2;
 }
 .countView{
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -244,17 +246,19 @@ FIN DE MAPA DE CONTENIDOS */
   display:grid;
   /* grid-template-columns: repeat(4, 1fr); */
   grid-auto-columns: 1fr min-content;
-  grid-template-rows:1fr 1fr;
+  grid-template-rows:1fr min-content;
   grid-auto-flow: column;
   text-align: center;
+  align-items: center;
 }
 .countNumber{
-  font-size: 5rem;
+  font-size: 6rem;
+  line-height: 6rem;
   font-weight: 100;
 }
 .dosPuntos{
-  font-size: 2rem;
-  transform: scaleY(2);
+  font-size: 6rem;
+  /* transform: scaleY(2); */
   grid-row: span 2;
   width: min-content;
 }
@@ -264,8 +268,9 @@ FIN DE MAPA DE CONTENIDOS */
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
 .form{
-  width: 80%;
+  width: 37%;
   margin:2rem;
+  margin-bottom: 16rem;
 }
 
 .formInputs{
@@ -376,4 +381,26 @@ FIN DE MAPA DE CONTENIDOS */
   transform: skewX(-25deg);
   background: var(--color1);
 
+}
+
+/* ---------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                              6.6) =background:
+------------------------------------------------------------------------------
+--------------------------------------------------------------------------- */
+.background1{
+  position: absolute;
+  /* top: 14rem; */
+  bottom:19rem;
+  right:0;
+  z-index: 1;
+  width: 87%;
+  /* height: 100%; */
+}
+.background2{
+  position: absolute;
+  bottom:0;
+  left:  0;
+  width: 100%;
+  z-index: 0;
 }
