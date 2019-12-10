@@ -323,12 +323,13 @@ FIN DE MAPA DE CONTENIDOS */
   width: 37%;
   margin:2rem;
   margin-bottom: 16rem;
+  margin-top: 1.5rem;
 }
 
 .formInputs{
   width: 100%;
   position: relative;
-  height: 2rem;
+  height: 1.7rem;
   overflow: hidden;
 }
 
@@ -338,7 +339,7 @@ FIN DE MAPA DE CONTENIDOS */
   /* color:#595f6e; */
   color:white;
   border:none;
-  padding-top:20px;
+  padding-top: 5px;
   outline: none;
   background: transparent;
 }
@@ -371,7 +372,8 @@ FIN DE MAPA DE CONTENIDOS */
   left: 0;
   transition: all 0.3s ease;
   color:#A0A0A0;
-  font-size: .7rem;
+  font-size: .6rem;
+  opacity: .7;
 }
 
 .formInputs input:focus + .labelName .contentName,
@@ -455,7 +457,7 @@ FIN DE MAPA DE CONTENIDOS */
   gap:.3rem;
   /* height:1.2rem; */
   margin: 1rem;
-  margin-top: 2rem;
+  margin-top: 2.2rem;
 
 }
 .yellowLine{
