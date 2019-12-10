@@ -178,12 +178,6 @@ FIN DE MAPA DE CONTENIDOS */
   src: url(../fonts/vipnagorgialla.ttf);
 }
 
-@font-face {
-  font-family: vipnagorgialla;
-  src: url(../fonts/vipnagorgialla.ttf);
-}
-
-
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
                            4) =ETIQUETAS GLOBALES:
@@ -195,7 +189,7 @@ FIN DE MAPA DE CONTENIDOS */
   margin: 0;
   padding: 0;
 }
-body{
+.countView{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,15 +211,18 @@ body{
                               6) =COMPONENTES:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
-
-
+.english{
+  color: #AAA;
+  font-size: .8em;
+}
 
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
                               6.1) =titles:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
-.title{
+.titles{
+  text-align: center;
   font-family: vipnagorgialla;
   text-transform: uppercase;
 }
@@ -243,7 +240,24 @@ body{
   font-size: 5rem;
   font-weight: 100;
 }
-
+.countCountainer{
+  display:grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-auto-columns: 1fr min-content;
+  grid-template-rows:1fr 1fr;
+  grid-auto-flow: column;
+  text-align: center;
+}
+.countNumber{
+  font-size: 5rem;
+  font-weight: 100;
+}
+.dosPuntos{
+  font-size: 2rem;
+  transform: scaleY(2);
+  grid-row: span 2;
+  width: min-content;
+}
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
                               6.3) =Form:

@@ -10,72 +10,108 @@
 </head>
 <body>
 
-  <div class="skew skew2"></div>
-  <div class="skew skew1"></div>
+  <view id="count" class="countView">
+
+    <div class="skew skew2"></div><div class="skew skew1"></div>
+
+    <hgroup class="titles">
+      <h1 class="title1">HR</h1>
+      <h2 class="title2">Novedad Mundial Proximamente</h2>
+      <h3 class="title3 english">World Premiere Comming Soon</h3>
+    </hgroup>
+
+        <div class="countCountainer">
+          <p id="days" class="countNumber">20</p>
+          <p class="countLabel">Dias/<span class="english">days</span></p>
+          <p class="dosPuntos">:</p>
+          <p id="hour" class="countNumber">10</p>
+          <p class="countLabel">Horas/<span class="english">hours</span></p>
+          <p class="dosPuntos">:</p>
+          <p id="mnts" class="countNumber">17</p>
+          <p class="countLabel">Minutos/<span class="english">minutes</span></p>
+          <p class="dosPuntos">:</p>
+          <p id="scds" class="countNumber">21</p>
+          <p class="countLabel">Segundos/<span class="english">seconds</span></p>
+        </div>
+    <!-- <p id="demo">27 : 0 : 13 : 17</p> -->
+    <!--
+        <div class="countCountainer">
+          <div class="countElement">
+            <p id="days" class="countNumber"></p>
+            <p class="countLabel">Dias/dias</p>
+          </div>
+          <div class="countElement">
+            <p id="hour" class="countNumber"></p>
+            <p class="countLabel">Horas/hours</p>
+          </div>
+          <div class="countElement">
+            <p id="mnts" class="countNumber"></p>
+            <p class="countLabel">Minutos/minutes</p>
+          </div>
+          <div class="countElement">
+            <p id="scds" class="countNumber"></p>
+            <p class="countLabel">Segundos/seconds</p>
+          </div>
+        </div> -->
+
+    <div class="yellowContainer">
+      <div class="yellowLine"></div>
+      <div class="yellowLine"></div>
+      <div class="yellowLine"></div>
+    </div>
 
 
-  <h1 class="title title1">HR</h1>
-  <h2 class="title title2">Novedad Mundial Proximamente</h2>
-  <h3 class="title title3">World Premiere Comming Soon</h3>
-  <p id="demo">27 : 0 : 13 : 17</p>
+
+    <p>Suscríbete y sé el primero en descubrir la solución más completa de bandejas portacables en acabados de alta resistencia</p>
+    <p>Subscribe and be the first one to discover the most complete solution in high resistence coatings for cable trays</p>
 
 
-  <div class="yellowContainer">
-    <div class="yellowLine"></div>
-    <div class="yellowLine"></div>
-    <div class="yellowLine"></div>
-  </div>
+    <form action="" class="form">
+
+        <div class="formInputs">
+          <input type="text" name="name" autocomplete="off" required>
+          <label for="name" class="labelName">
+            <span class="contentName">Nombre / name</span>
+          </label>
+        </div>
+
+        <div class="formInputs">
+          <input type="text" name="name" autocomplete="off" required>
+          <label for="name" class="labelName">
+            <span class="contentName">Apellido / Last name</span>
+          </label>
+        </div>
+
+        <div class="formInputs">
+          <input type="text" name="name" autocomplete="off" required>
+          <label for="name" class="labelName">
+            <span class="contentName">Empresa / Company</span>
+          </label>
+        </div>
+
+        <div class="formInputs">
+          <input type="text" name="name" autocomplete="off" required>
+          <label for="name" class="labelName">
+            <span class="contentName">E-mail</span>
+          </label>
+        </div>
+
+        <div class="formInputs">
+          <input type="text" name="name" autocomplete="off" required>
+          <label for="name" class="labelName">
+            <span class="contentName">Teléfono / telephone</span>
+          </label>
+        </div>
+
+        <button type="button" name="button">Enviar / send</button>
+    </form>
 
 
-
-  <p>Suscríbete y sé el primero en descubrir la solución más completa de bandejas portacables en acabados de alta resistencia</p>
-  <p>Subscribe and be the first one to discover the most complete solution in high resistence coatings for cable trays</p>
-
-
-  <form action="" class="form">
-
-      <div class="formInputs">
-        <input type="text" name="name" autocomplete="off" required>
-        <label for="name" class="labelName">
-          <span class="contentName">Nombre / name</span>
-        </label>
-      </div>
-
-      <div class="formInputs">
-        <input type="text" name="name" autocomplete="off" required>
-        <label for="name" class="labelName">
-          <span class="contentName">Apellido / Last name</span>
-        </label>
-      </div>
-
-      <div class="formInputs">
-        <input type="text" name="name" autocomplete="off" required>
-        <label for="name" class="labelName">
-          <span class="contentName">Empresa / Company</span>
-        </label>
-      </div>
-
-      <div class="formInputs">
-        <input type="text" name="name" autocomplete="off" required>
-        <label for="name" class="labelName">
-          <span class="contentName">E-mail</span>
-        </label>
-      </div>
-
-      <div class="formInputs">
-        <input type="text" name="name" autocomplete="off" required>
-        <label for="name" class="labelName">
-          <span class="contentName">Teléfono / telephone</span>
-        </label>
-      </div>
-
-      <button type="button" name="button">Enviar / send</button>
-  </form>
-
-
+  </view>
 
 
   <script>
+  d=document;
     // Set the date we're counting down to
     var countDownDate = new Date("Jan 5, 2020 15:37:25").getTime();
 
@@ -89,19 +125,22 @@
       var distance = countDownDate - now;
 
       // Time calculations for days, hours, minutes and seconds
-      var days    = Math.floor( distance / (1000 * 60 * 60 * 24));
-      var hours   = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      var days = Math.floor( distance / (1000 * 60 * 60 * 24));
+      var hour = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var mnts = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var scds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // Output the result in an element with id="demo"
-      document.getElementById("demo").innerHTML = days + " : " + hours + " : "
-      + minutes + " : " + seconds;
+      // d.getElementById("demo").innerHTML = days + " : " + hour + " : " + mnts    + " : " + scds;
+      d.getElementById("days").innerHTML = days;
+      d.getElementById("hour").innerHTML = hour;
+      d.getElementById("mnts").innerHTML = mnts;
+      d.getElementById("scds").innerHTML = scds;
 
       // If the count down is over, write some text
       if (distance < 0) {
         clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
+        d.getElementById("demo").innerHTML = "EXPIRED";
       }
     }, 1000);
   </script>
