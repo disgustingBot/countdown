@@ -213,9 +213,16 @@ FIN DE MAPA DE CONTENIDOS */
                               6) =COMPONENTES:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
-.english{
+.english {
   color: #AAA;
   font-size: .8em;
+}
+
+.mainLogo {
+  position: absolute;
+  top: .6rem;
+  right: 2rem;
+  width: 230px;
 }
 
 /* ---------------------------------------------------------------------------
@@ -229,7 +236,7 @@ FIN DE MAPA DE CONTENIDOS */
   text-transform: uppercase;
 }
 .title1{
-  font-size: 5rem;
+  height: 5rem;
 }
 
 
