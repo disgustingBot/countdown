@@ -208,6 +208,26 @@ FIN DE MAPA DE CONTENIDOS */
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
 
+.footer {
+  position: absolute;
+  left: 3rem;
+  bottom: 1rem;
+}
+
+.privacyContainer {
+  display: flex;
+}
+
+.privacyLink {
+  color: #AAA;
+  text-decoration: none;
+  font-size: .6rem;
+  opacity: .5;
+  margin: .1rem 0;
+}
+
+.credits {color: #AAA; font-size: .5rem; opacity: .7}
+
 
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -218,23 +238,32 @@ FIN DE MAPA DE CONTENIDOS */
   color: #AAA;
 }
 
-/* ---------------------------------------------------------------------------
-------------------------------------------------------------------------------
-                              6.1) =titles:
-------------------------------------------------------------------------------
---------------------------------------------------------------------------- */
-.titles{
-  text-align: center;
-  font-family: vipnagorgialla;
-  text-transform: uppercase;
-}
-
 .mainLogo {
   position: absolute;
   top: .6rem;
   right: 2rem;
   width: 230px;
   z-index: 4;
+}
+
+
+/* ---------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                              6.1) =titles:
+------------------------------------------------------------------------------
+--------------------------------------------------------------------------- */
+.titles {
+  text-align: center;
+  font-family: vipnagorgialla;
+}
+.title1 {height: 5rem;}
+.title2 {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  word-spacing: 2px;
+  font-weight: 100;
+  text-transform: uppercase;
 }
 
 .title1{
@@ -245,6 +274,14 @@ FIN DE MAPA DE CONTENIDOS */
   font-size: .7rem;
 }
 
+.title3 {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  font-weight: 100;
+  font-style: italic;
+  text-transform: lowercase;
+}
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
                               6.2) =Count Down:
@@ -254,7 +291,7 @@ FIN DE MAPA DE CONTENIDOS */
   font-size: 5rem;
   font-weight: 100;
 }
-.countCountainer{
+.countCountainer {
   display:grid;
   /* grid-template-columns: repeat(4, 1fr); */
   grid-auto-columns: 1fr min-content;
@@ -262,6 +299,7 @@ FIN DE MAPA DE CONTENIDOS */
   grid-auto-flow: column;
   text-align: center;
   align-items: center;
+  margin-top: 2rem;
 }
 .countNumber{
   font-size: 6rem;
@@ -269,7 +307,7 @@ FIN DE MAPA DE CONTENIDOS */
   font-weight: 100;
 }
 .dosPuntos{
-  font-size: 6rem;
+  font-size: 4rem;
   /* transform: scaleY(2); */
   grid-row: span 2;
   width: min-content;
@@ -279,6 +317,8 @@ FIN DE MAPA DE CONTENIDOS */
                               6.3) =Form:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
+
+.suscribete {font-size: .7rem; text-align: center}
 .form{
   width: 37%;
   margin:2rem;
@@ -412,16 +452,18 @@ FIN DE MAPA DE CONTENIDOS */
   position: relative;
   display: grid;
   grid-auto-flow: column;
-  gap:.5rem;
+  gap:.3rem;
   /* height:1.2rem; */
   margin: 1rem;
+  margin-top: 2rem;
+
 }
 .yellowLine{
   /* position: absolute; */
   top:0;
   left: 0;
-  height:1.2rem;
-  width:  .5rem;
+  height: .8rem;
+  width:  .35rem;
   transform-origin: 0 0;
   transform: skewX(-25deg);
   background: var(--color1);
