@@ -197,9 +197,8 @@ FIN DE MAPA DE CONTENIDOS */
   align-items: center;
   padding: 5rem;
   background: black;
-  color:white;
+  color: white;
   font-family: 'Poppins', sans-serif;
-
 }
 
 /* ---------------------------------------------------------------------------
@@ -404,7 +403,7 @@ FIN DE MAPA DE CONTENIDOS */
   left:0;
   border: 2px solid white;
 }
-#checkNorms{position: absolute;left: -200vw;}
+#checkNorms{position:absolute;left:-200vw}
 #checkNorms:checked ~ .checkNorms::after{
   background: white;
 }
