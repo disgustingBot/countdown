@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400&display=swap" rel="stylesheet">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body id="view">
 
 
 
@@ -169,11 +169,12 @@
           <span class="contentName">Teléfono / telephone</span>
         </label>
       </div>
-      <input type="checkbox" name="a6" id="checkNorms" required>
+      <input type="checkbox" name="a6" id="checkNorms">
       <label class="checkNorms" for="checkNorms">Hé leido y acepto la política de privacidad</label>
 
       <input type="text" name="a9" value="" placeholder="jeje" hidden>
-      <button class="butttonSend" type="button" name="button">Enviar / <span class="english">send</span></button>
+      <!-- <input type="submit" value="Submit"> -->
+      <button class="butttonSend" type="submit" name="button">Enviar / <span class="english">send</span></button>
     </form>
 
     <div class="backgroundShadow"></div>
@@ -193,12 +194,15 @@
 
 
   </view>
+  <view class="landingView">
+
+  </view>
 
 
   <script>
   d=document;
     // Set the date we're counting down to
-    var countDownDate = new Date("Feb 14, 2020 15:37:25").getTime();
+    var countDownDate = new Date("Feb 1, 2010 15:37:25").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(()=>{
@@ -208,12 +212,11 @@
 
       // Find the distance between now and the count down date
       var distance = countDownDate - now;
-            // If the count down is over, write some text
-            if (distance < 0) {
-              clearInterval(x);
-              d.getElementById("count").classList.add("EXPIRED");
-              // d.getElementById("demo").innerHTML = "EXPIRED";
-            }
+      // If the count down is over, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        d.getElementById("view").classList.add("expired");
+      }
 
       // Time calculations for days, hours, minutes and seconds
       var days = Math.floor( distance / (1000 * 60 * 60 * 24));
