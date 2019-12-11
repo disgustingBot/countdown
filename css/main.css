@@ -187,8 +187,15 @@ FIN DE MAPA DE CONTENIDOS */
 *{
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  z-index: 3;
+  padding:0;
+  z-index:3;
+}
+body{
+  /* overflow-x: hidden; */
+  display: grid;
+  grid-template-columns: 100% 100%;
+  overflow-x: hidden;
+  grid-auto-flow: column;
 }
 .countView{
   position: relative;
@@ -198,8 +205,27 @@ FIN DE MAPA DE CONTENIDOS */
   padding: 5rem;
   background: black;
   color: white;
+  width: 100%;
   font-family: 'Poppins', sans-serif;
+  transition: .5s;
+  /* overflow: scroll; */
 }
+
+#view.expired{
+  transform: translateX(-100%);
+  transition: .5s;
+}
+.countView.expired{
+  margin-left: -100%;
+}
+
+
+.landingView{
+  background: red;
+  height: 100%;
+  width: 100vw;
+}
+
 
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------

@@ -15,7 +15,6 @@ $feedback_page = "index.php";
 
 /*This next bit loads the form field data into variables.
 If you add a form field, you will need to add it here.*/
-$frm= $_POST['frm'];
 $a1 = $_POST['a1'];
 $a2 = $_POST['a2'];
 $a3 = $_POST['a3'];
@@ -44,18 +43,18 @@ if($_POST['a9'] != ""){
     // $mail->Username = 'idemo@idemomotors.com';           // SMTP username
     // $mail->Password = 'Idemomotors25';                   // SMTP password
     $mail->Username = 'webdesign@mediactiu.com';       // SMTP username
-    $mail->Password = 'VWOUgrP06ZKmLULqSl5W';            // SMTP password
+    $mail->Password = 'eN{zi)d#!9qI';            // SMTP password
     $mail->SMTPSecure = 'ssl';                           // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;                                   // TCP port to connect to
     $mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ));
 
     //Recipients
-    $mail->setFrom('consultas@idemomotors.com', 'Consultas Idemo');
+    $mail->setFrom('webdesign@mediactiu.com', 'Consultas Interflex');
     // $mail->addAddress('molinerozadkiel@gmail.com', 'Markus');        // Add a recipient
-    $mail->addAddress('idemo@idemomotors.com', 'Idemo');             // Add a recipient
+    $mail->addAddress('molinerozadkiel@gmail.com', 'Interflex');             // Add a recipient
     // $mail->addAddress($email_address, $first_name);               // Add a recipient
     // $mail->addAddress('ellen@example.com');                       // Name is optional
-    $mail->addReplyTo('consultas@idemomotors.com', 'Consultas Idemo');
+    $mail->addReplyTo('webdesign@mediactiu.com', 'Consultas Interflex');
     // $mail->addCC('cc@example.com');
     // $mail->addBCC('bcc@example.com');
 
@@ -67,32 +66,30 @@ if($_POST['a9'] != ""){
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Nueva consulta de '.$a1;
     $mail->Body    =
-      'Formulario de origen: '.$frm.'<br>'.
-      'data1: '.$a1.'<br>'.
-      'data2: '.$a2.'<br>'.
-      'data3: '.$a3.'<br>'.
-      'data4: '.$a4.'<br>'.
-      'data5: '.$a5.'<br>'.
-      'data6: '.$a6.'<br>'.
+      'nombre: '.$a1.'<br>'.
+      'apellido: '.$a2.'<br>'.
+      'empresa: '.$a3.'<br>'.
+      'e-mail: '.$a4.'<br>'.
+      'telefono: '.$a5.'<br>'.
+      'terms and conditions: '.$a6.'<br>'.
       'fecha y hora: '.$timestamp;
 
     $mail->AltBody =
-      'Formulario de origen: '.$frm.'<br>'.
-      'data1: '.$a1.'<br>'.
-      'data2: '.$a2.'<br>'.
-      'data3: '.$a3.'<br>'.
-      'data4: '.$a4.'<br>'.
-      'data5: '.$a5.'<br>'.
-      'data6: '.$a6.'<br>'.
+      'nombre: '.$a1.'<br>'.
+      'apellido: '.$a2.'<br>'.
+      'empresa: '.$a3.'<br>'.
+      'e-mail: '.$a4.'<br>'.
+      'telefono: '.$a5.'<br>'.
+      'terms and conditions: '.$a6.'<br>'.
       'fecha y hora: '.$timestamp;
 
     // header( "Location: $thankyou_page" );
     // header( "Location: index.php?mail=success" );
-    header( "Location: https://www.idemomotors.com/?mail=success" );
+    header( "Location: http://interflex.mediactiu.com/?mail=success" );
     $mail->send();
     exit;
   } catch (Exception $e) {
-    header( "Location: https://www.idemomotors.com/?mail=error" );
+    header( "Location: http://interflex.mediactiu.com/?mail=error" );
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
       // header( "Location: index.php?mail=error" );
     exit;
