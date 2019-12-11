@@ -245,12 +245,22 @@ FIN DE MAPA DE CONTENIDOS */
   padding:0;
   z-index:3;
 }
+/* html, body{overflow-x:hidden} */
 body{
-  /* overflow-x: hidden; */
   display: grid;
-  grid-template-columns: 100% 100%;
-  overflow-x: hidden;
   grid-auto-flow: column;
+  grid-template-columns: 100% 100%;
+  /* width: 200%; */
+  overflow-x: hidden;
+  position: relative;
+  /* transform: translateX(-20%); */
+  transition: .5s;
+}
+#view.expired .countView{
+  display: none;
+}
+#view:not(.expired) .landingView{
+  display:none;
 }
 .countView{
   position: relative;
@@ -266,19 +276,14 @@ body{
   /* overflow: scroll; */
 }
 
-#view.expired{
-  transform: translateX(-100%);
-  transition: .5s;
-}
-.countView.expired{
-  margin-left: -100%;
-}
+
 
 
 .landingView{
   background: red;
   height: 100%;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
 }
 
 
