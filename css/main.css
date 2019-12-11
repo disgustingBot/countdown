@@ -79,6 +79,27 @@ FIN DE MAPA DE CONTENIDOS */
   ------------------------------------------------------------------------------
   --------------------------------------------------------------------------- */
 
+  /* Componentes */
+
+  --mainLogoHeight: 150px;
+  --mainLogoTop: 0;
+  --mainLogoRight: 0;
+
+  --title1Height: 3rem;
+  --title2FontSize: 1rem;
+  --title3FontSize: .8rem;
+
+  --countNumberFontSize: 3rem;
+  --countLabelFontSize: .7rem;
+
+  --formWidth: 70%;
+  --checkNorms: .5rem;
+  --formMarginBottom: 8rem;
+
+  /* Estructura */
+
+  --countViewPadding: 5rem 1rem;
+
 }
 
 
@@ -107,6 +128,27 @@ FIN DE MAPA DE CONTENIDOS */
 --------------------------------------------------------------------------- */
 @media screen and (min-width: 576px) {
   :root {
+
+    /* Componentes */
+
+    --mainLogoHeight: 200px;
+    --mainLogoTop: 0;
+    --mainLogoRight: 0;
+
+    --title1Height: 3rem;
+    --title2FontSize: 1rem;
+    --title3FontSize: .8rem;
+
+    --countNumberFontSize: 4rem;
+    --countLabelFontSize: .8rem;
+
+    --formWidth: 70%;
+    --checkNorms: .5rem;
+    --formMarginBottom: 15rem;
+
+    /* Estructura */
+
+    --countViewPadding: 6rem 2rem;
   }
 }
 
@@ -118,6 +160,9 @@ FIN DE MAPA DE CONTENIDOS */
 @media screen and (min-width: 768px) {
   :root {
     --sizeR: calc(calc(var(--sizeRc) * 1px) + (var(--sizeRd) - var(--sizeRc)) * ((100vw - 768px) / (1200 - 768)));
+
+
+
   }
 }
 
@@ -128,9 +173,29 @@ FIN DE MAPA DE CONTENIDOS */
 --------------------------------------------------------------------------- */
 @media screen and (min-width: 992px) {
   :root {
+
+    /* Componentes */
+
+    --mainLogoHeight: 230px;
+    --mainLogoTop: .6rem;
+    --mainLogoRight: 2rem;
+
+    --title1Height: 5rem;
+    --title2FontSize: 1.4rem;
+    --title3FontSize: 1.2rem;
+
+    --countNumberFontSize: 6rem;
+    --countLabelFontSize: 1rem;
+
+    --formWidth: 37%;
+    --checkNorms: .3rem;
+    --formMarginBottom: 16rem;
+
+
+    /* Estructura */
+    --countViewPadding: 5rem;
   }
 }
-
 
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -144,10 +209,6 @@ FIN DE MAPA DE CONTENIDOS */
 }
 
 
-
-
-
-
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -157,12 +218,6 @@ FIN DE MAPA DE CONTENIDOS */
 ------------------------------------------------------------------------------
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
-
-
-
-
-
-
 
 
 
@@ -195,7 +250,7 @@ FIN DE MAPA DE CONTENIDOS */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5rem;
+  padding: var(--countViewPadding);
   background: black;
   color: white;
   font-family: 'Poppins', sans-serif;
@@ -239,9 +294,9 @@ FIN DE MAPA DE CONTENIDOS */
 
 .mainLogo {
   position: absolute;
-  top: .6rem;
-  right: 2rem;
-  width: 230px;
+  top: var(--mainLogoTop);
+  right: var(--mainLogoRight);
+  width: var(--mainLogoHeight);
   z-index: 4;
 }
 
@@ -255,9 +310,10 @@ FIN DE MAPA DE CONTENIDOS */
   text-align: center;
   font-family: vipnagorgialla;
 }
-.title1 {height: 5rem;}
+.title1 {height: var(--title1Height); max-width: 50%;}
+
 .title2 {
-  font-size: 1.4rem;
+  font-size: var(--title2FontSize);
   letter-spacing: 1px;
   margin-top: 1rem;
   word-spacing: 2px;
@@ -265,16 +321,13 @@ FIN DE MAPA DE CONTENIDOS */
   text-transform: uppercase;
 }
 
-.title1{
-  font-size: 5rem;
-}
 
 .text{
   font-size: .7rem;
 }
 
 .title3 {
-  font-size: 1.2rem;
+  font-size: var(--title3FontSize);
   letter-spacing: 2px;
   word-spacing: 5px;
   font-weight: 100;
@@ -292,7 +345,6 @@ FIN DE MAPA DE CONTENIDOS */
 }
 .countCountainer {
   display:grid;
-  /* grid-template-columns: repeat(4, 1fr); */
   grid-auto-columns: 1fr min-content;
   grid-template-rows:1fr min-content;
   grid-auto-flow: column;
@@ -300,11 +352,14 @@ FIN DE MAPA DE CONTENIDOS */
   align-items: center;
   margin-top: 2rem;
 }
-.countNumber{
-  font-size: 6rem;
+.countNumber {
+  font-size: var(--countNumberFontSize);
   line-height: 6rem;
   font-weight: 100;
 }
+
+.countLabel {font-size: var(--countLabelFontSize)}
+
 .dosPuntos{
   font-size: 4rem;
   /* transform: scaleY(2); */
@@ -319,9 +374,9 @@ FIN DE MAPA DE CONTENIDOS */
 
 .suscribete {font-size: .7rem; text-align: center}
 .form{
-  width: 37%;
+  width: var(--formWidth);
   margin:2rem;
-  margin-bottom: 16rem;
+  margin-bottom: var(--formMarginBottom);
   margin-top: 1.5rem;
 }
 
@@ -389,7 +444,7 @@ FIN DE MAPA DE CONTENIDOS */
 }
 
 .checkNorms{
-  font-size:.3rem;
+  font-size: var(--checkNorms);
   position: relative;
   padding-left: .7rem;
 }
