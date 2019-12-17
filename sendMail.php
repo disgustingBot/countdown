@@ -12,6 +12,7 @@ $feedback_page = "index.php";
 // $error_page = "error_message.html";
 // $thankyou_page = "profesionales/index.php";
 
+// 6614626
 
 /*This next bit loads the form field data into variables.
 If you add a form field, you will need to add it here.*/
@@ -24,7 +25,7 @@ $a6 = $_POST['a6'];
 $timestamp = date("Y-m-d H:i:s");
 
 if($_POST['a9'] != ""){
-  header( "Location: https://www.idemomotors.com/?mail=nope" . $_POST['a9'] );
+  header( "Location: https://multiviahr.info/?mail=nope" . $_POST['a9'] );
   exit;
 } else {
 
@@ -85,11 +86,11 @@ if($_POST['a9'] != ""){
 
     // header( "Location: $thankyou_page" );
     // header( "Location: index.php?mail=success" );
-    header( "Location: http://interflex.mediactiu.com/?mail=success" );
     $mail->send();
+    header( "Location: https://multiviahr.info/?mail=success" );
     exit;
   } catch (Exception $e) {
-    header( "Location: http://interflex.mediactiu.com/?mail=error" );
+    // header( "Location: https://multiviahr.info/?mail=error" );
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
       // header( "Location: index.php?mail=error" );
     exit;
