@@ -81,9 +81,12 @@ FIN DE MAPA DE CONTENIDOS */
   --countNumberFontSize: 3rem;
   --countLabelFontSize: .6rem;
 
-  --formWidth: 70%;
-  --checkNorms: .5rem;
+  --formWidth: 90%;
+  --checkNorms: .7rem;
   --formMarginBottom: 8rem;
+
+  --checkBoxNormsSize: .7rem;
+  --checkNormsPadding: 1.1rem;
 
   /* Estructura */
 
@@ -179,6 +182,9 @@ FIN DE MAPA DE CONTENIDOS */
     --formWidth: 37%;
     --checkNorms: .3rem;
     --formMarginBottom: 16rem;
+
+    --checkBoxNormsSize: .3rem;
+    --checkNormsPadding: .7rem;
 
 
     /* Estructura */
@@ -321,6 +327,8 @@ body{
 }
 
 
+
+
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
                               6.1) =titles:
@@ -353,6 +361,14 @@ body{
   font-weight: 100;
   font-style: italic;
   text-transform: lowercase;
+}
+
+
+
+.AltaRecistenciaTitle {
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  font-weight: 200;
 }
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -466,12 +482,12 @@ body{
 .checkNorms{
   font-size: var(--checkNorms);
   position: relative;
-  padding-left: .7rem;
+  padding-left: var(--checkNormsPadding);
 }
 .checkNorms::after{
   content: "";
-  width:  .3rem;
-  height: .3rem;
+  width:  var(--checkBoxNormsSize);
+  height: var(--checkBoxNormsSize);
   background: transparent;
   position: absolute;
   top:0;
