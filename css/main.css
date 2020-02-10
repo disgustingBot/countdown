@@ -21,6 +21,13 @@
 5) =ESTRUCTURA:
 
 6) =COMPONENTES:
+6.1) =titles
+6.2) =Count Down
+6.3) =Form
+6.4) =skews
+6.5) =yellow lines
+6.6) =background
+6.7) =CTAs
 
 FIN DE MAPA DE CONTENIDOS */
 
@@ -274,11 +281,8 @@ body{
 
 
 
-.landingView{
-  background: red;
-  height: 100%;
-  min-height: 100vh;
-  width: 100%;
+.landingView {
+  background: black;
 }
 
 
@@ -287,6 +291,12 @@ body{
                               5) =ESTRUCTURA:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
+
+.multiviaHRHeader {
+  width: 100%;
+  height: 5rem;
+}
+
 
 .footer {
   position: absolute;
@@ -308,13 +318,18 @@ body{
 
 .credits {color: #AAA; font-size: .5rem; opacity: .7}
 
-
+.atf {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+   align-items: flex-end;
+}
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
                               6) =COMPONENTES:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
-.english{
+.english {
   color: #AAA;
 }
 
@@ -326,7 +341,16 @@ body{
   z-index: 4;
 }
 
+.hrLogo {
+  height: 2rem;
+  margin: auto;
+  margin-right: 1rem;
+}
 
+.multiviaLogo1 {
+  margin-top: 1rem;
+  height: 4rem;
+}
 
 
 /* ---------------------------------------------------------------------------
@@ -369,6 +393,9 @@ body{
   margin-bottom: 3rem;
   margin-top: 1rem;
   font-weight: 200;
+}
+.landingTitle1 {
+  height: 4rem;
 }
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -517,7 +544,7 @@ body{
                               6.4) =skews:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
-.skew{
+.skew {
   position: absolute;
   top:0;
   left: 0;
@@ -526,13 +553,54 @@ body{
   transform-origin: 0 0;
   transform: skewX(-25deg);
   background: #AAA;
-  /* box-shadow:  */
   box-shadow: 14px 0 28px rgba(0,0,0,0.25), 10px 0 10px rgba(0,0,0,0.22);
 }
-.skew2{
-  height: 1.7rem;
+
+.landingSkew>* {
+  transform: skewX(25deg);
+}
+
+.landingSkew {
+  position: absolute;
+  width:20%;
+  transform-origin: 0 0;
+  transform: skewX(-25deg);
+  background: #AAA;
+  box-shadow: 10px 0 28px rgba(0,0,0,0.4), 6px 0 10px rgba(0,0,0,0.4);
+  display: flex;
+}
+.skew1 {
+  height: 4.5rem;
+  z-index: 3;
+  box-shadow: 2px 2px 8px 6px rgba(0,0,0,0.5), 8px 5px 6px 0px rgba(255,255,255,0.4);
+  background: #9B9B9B;
+}
+
+.skew2 {
+  height: 1.9rem;
   width:calc(20% + 3rem);
   background: var(--color1);
+  z-index: 2;
+  box-shadow: 5px 5px 6px -1px rgba(0,0,0,0.5);
+}
+
+.skew3 {
+  background: white;
+  height: 2.1rem;
+  display: flex;
+  top: 1.6rem;
+  left: 0;
+  z-index: 1;
+  width:calc(20% + 14rem);
+}
+
+.landingSkew.skew3 {
+  justify-content: flex-end;
+}
+
+.headerSubLogo {
+  height: 1rem;
+  margin: auto 1rem;
 }
 
 /* ---------------------------------------------------------------------------
@@ -540,18 +608,16 @@ body{
                               6.5) =yellow lines:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
-.yellowContainer{
+.yellowContainer {
   position: relative;
   display: grid;
   grid-auto-flow: column;
   gap:.3rem;
-  /* height:1.2rem; */
-  margin: 1rem;
+  margin: 1.2rem;
   margin-top: 2.2rem;
 
 }
-.yellowLine{
-  /* position: absolute; */
+.yellowLine {
   top:0;
   left: 0;
   height: .8rem;
@@ -567,7 +633,7 @@ body{
                               6.6) =background:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
-.backgroundShadow{
+.backgroundShadow {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -576,14 +642,12 @@ body{
   top: 0;
   left:0;
 }
-.background1{
+.background1 {
   position: absolute;
-  /* top: 14rem; */
   bottom:19rem;
   right:0;
   z-index: 1;
   width: 87%;
-  /* height: 100%; */
 }
 .background2{
   position: absolute;
@@ -591,4 +655,16 @@ body{
   left:  0;
   width: 100%;
   z-index: 0;
+}
+
+/* ---------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                              6.7) =CTAs:
+------------------------------------------------------------------------------
+--------------------------------------------------------------------------- */
+
+.CTA1 {
+  width: 64%;
+  border-bottom: solid 3px var(--color1);
+  display: flex;
 }
