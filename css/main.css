@@ -98,7 +98,47 @@ FIN DE MAPA DE CONTENIDOS */
   /* Estructura */
 
   --countViewPadding: 8rem 1rem;
+  --section1Caption: 100%;
+  --section1CaptionPadding: 2rem 1rem 0 1rem;
 
+  /* --------------------------------------------------------------
+  ------------------------Landing----------------------------------
+  ---------------------------------------------------------------*/
+
+  /* Componentes */
+  --atfBgPosition: relative;
+  --atfBgTop: 0;
+  --atfBgWidth: 100%;
+  --atfBgLeft: -30%;
+  --atfBgTransform: scale(1.5);
+  --mainLogoLandingTop: 4rem;
+  --CTA1Width: 100%;
+  --multiviaHRLogoMargin: auto;
+  --frontaltry1Display: none;
+  --frontaltry12Display: block;
+  --frontalTray1Display: 60%;
+  --frontalTryal1Margin: auto;
+
+  /* Estructura */
+  --section1Direction: column;
+  --sectionTxtTextAlign: justify;
+
+  /* Skews */
+  --sekw1Width: 40%;
+  --skew3Width: calc(var(--sekw1Width) + 10rem);
+  --skewInverseContainerMarginTop: 2rem;
+  --skewInverseContainerWidth: 90%;
+  --skewContainer2MarginTop: 7rem;
+  --skew3Top: 1.9rem;
+
+  /* CTAs */
+  --descargaCatalogo1Margin: 1rem auto;
+  --descargaCatalogo1Width: 80%;
+  --CTA1MarginTop: 6rem;
+  --descargaIconTxtLineHeight: 1rem;
+
+  /* Titles */
+  --multiviaHgroup1Width: 95%;
 }
 
 
@@ -131,7 +171,6 @@ FIN DE MAPA DE CONTENIDOS */
     /* Componentes */
 
     --mainLogoHeight: 200px;
-    --mainLogoTop: 0;
     --mainLogoRight: 0;
 
     --title1Height: 3rem;
@@ -147,7 +186,13 @@ FIN DE MAPA DE CONTENIDOS */
 
     /* Estructura */
 
-    --countViewPadding: 6rem 2rem;
+    /* --------------------------------------------------------------
+    ------------------------Landing----------------------------------
+    ---------------------------------------------------------------*/
+
+    /* Componentes */
+
+    --mainLogoLandingTop: 0rem;
 
   }
 }
@@ -166,15 +211,29 @@ FIN DE MAPA DE CONTENIDOS */
     ------------------------Landing----------------------------------
     ---------------------------------------------------------------*/
 
-    /* Componentes */
+    /* Estructura */
 
-    --atfBgTop: 14rem;
+
+
+
+    /* Componentes */
     --atfBgWidth: 65%;
+    --atfBgTop: 23rem;
+    --atfBgPosition: absolute;
+    --atfBgLeft: 0;
+    --atfBgTransform: unset;
+    --frontalTryal1Margin: auto;
+
 
     /* Skews */
-
     --skewInverseContainerWidth: 65%;
     --skewInverseContainerMarginTop: 1rem;
+    --skew3Width: calc(var(--sekw1Width) + 14rem);
+    --sekw1Width: 20%;
+    --skewContainer2MarginTop: 13rem;
+    --skew3Top: 1.6rem;
+
+    /* Titles */
 
   }
 }
@@ -193,7 +252,7 @@ FIN DE MAPA DE CONTENIDOS */
     --mainLogoTop: .6rem;
     --mainLogoRight: 2rem;
 
-    --title1Height: 5rem;
+    --title1Height: 6rem;
     --title2FontSize: 1.4rem;
     --title3FontSize: 1.2rem;
 
@@ -216,17 +275,34 @@ FIN DE MAPA DE CONTENIDOS */
     ------------------------Landing----------------------------------
     ---------------------------------------------------------------*/
 
+    /* Estructura */
+    --section1Direction: row;
+    --section1Caption: 70%;
+    --section1CaptionPadding: 2rem 1rem 2rem 3rem;
+    --sectionTxtTextAlign: left;
+
     /* Componentes */
 
     --atfBgTop: 10rem;
     --atfBgWidth: 70%;
+    --multiviaHRLogoMargin: auto auto 1rem 0;
+    --atfBgTop: 12rem;
+    --multiviaHgroup1Width: 64%;
+    --frontaltry1Display: block;
+    --frontaltry12Display: none;
+    --frontalTray1Display: 35%;
 
     /* Skews */
-    --skewContainer2Width: 50%;
+    --skewContainer2Width: 45%;
     --skewInverseContainerWidth: 40%;
     --skewInverseContainerMarginTop: 1rem;
 
-
+    /* CTAs */
+    --CTA1Width:  64%;
+    --descargaCatalogo1Margin: auto 3rem 1rem auto;
+    --descargaCatalogo1Width: unset;
+    --CTA1MarginTop: 1rem;
+    --descargaIconTxtLineHeight: .9rem;
   }
 }
 
@@ -253,11 +329,48 @@ h1, h2, h3, h4, h5, h6, .thisIsATitleToo {
 
     --atfBgTop: 7rem;
     --atfBgWidth: 80%;
+    --frontalTryal1Margin: unset;
 
     /* Skews */
-    --skewContainer2Width: 50%;
+    --skewContainer2Width: 32%;
   }
 }
+/* ---------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                          2.1) min-width:  =1300px
+------------------------------------------------------------------------------
+--------------------------------------------------------------------------- */
+@media  screen and (min-width: 1300px) {
+  :root {
+    --sizeR: calc(var(--sizeRd) * 1px);
+    /* --------------------------------------------------------------
+    ------------------------Landing----------------------------------
+    ---------------------------------------------------------------*/
+    /* Componentes */
+    --atfBgTop: 6rem;
+    --atfBgWidth: 75%;
+  }
+}
+/* ---------------------------------------------------------------------------
+------------------------------------------------------------------------------
+                          2.1) min-width:  =1500px
+------------------------------------------------------------------------------
+--------------------------------------------------------------------------- */
+@media  screen and (min-width: 1500px) {
+  :root {
+    --sizeR: calc(var(--sizeRd) * 1px);
+    /* --------------------------------------------------------------
+    ------------------------Landing----------------------------------
+    ---------------------------------------------------------------*/
+    /* Componentes */
+    --atfBgTop: 3rem;
+    --atfBgWidth: 50%;
+
+    /* Skews */
+    --skewContainer2MarginTop: 8rem;
+  }
+}
+
 
 
 /* ---------------------------------------------------------------------------
@@ -371,7 +484,7 @@ body{
   flex-wrap: wrap;
   align-items: flex-end;
   position: relative;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 /* SEPARATORS */
@@ -382,16 +495,37 @@ body{
   margin: auto;
   width: 60%;
 }
+
+
+/* Landing Sections */
+
+.section1 {
+  display: flex;
+  flex-direction: var(--section1Direction);
+}
+
+.section1Caption {
+  width: var(--section1Caption);
+  padding: var(--section1CaptionPadding);
+}
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
                               6) =COMPONENTES:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
-.english {color: #AAA;}
+.english {color: #AAA!important;}
 .darkEnglish {color: #65635F;}
 .mainLogo {
   position: absolute;
   top: var(--mainLogoTop);
+  right: var(--mainLogoRight);
+  width: var(--mainLogoHeight);
+  z-index: 4;
+}
+
+.mainLogoLanding {
+  position: absolute;
+  top: var(--mainLogoLandingTop);
   right: var(--mainLogoRight);
   width: var(--mainLogoHeight);
   z-index: 4;
@@ -404,24 +538,47 @@ body{
 }
 
 .multiviaHRLogo {
-  margin-bottom: 1rem;
+  margin: var(--multiviaHRLogoMargin);
   height: 6.5rem;
 }
 
 .atfBg {
-  position: absolute;
+  position: var(--atfBgPosition);
   top: var(--atfBgTop);
-  left: 0;
+  left: var(--atfBgLeft);
   width: var(--atfBgWidth);
   z-index: -1;
+  transform: var(--atfBgTransform);
 }
 
+
+.sectionTxt {
+  color: white;
+  font-size: .75rem;
+  margin: .75rem 0;
+  line-height: 1rem;
+  text-align: var(--sectionTxtTextAlign)
+}
+
+.frontalTray1:nth-child(2) {display: var(--frontaltry1Display)}
+.frontalTray1:nth-child(3) {display: var(--frontaltry12Display)}
+
+.frontalTray1 {
+  object-fit: contain;
+  width: var(--frontalTray1Display);
+  height: 100%;
+  margin: var(--frontalTryal1Margin);
+  margin-bottom: auto;
+  padding: 0 0 2rem 0;
+}
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
                               6.1) =titles:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
-
+.titles {
+  text-align: center;
+}
 .title1 {height: var(--title1Height); max-width: 50%;}
 
 .title2 {
@@ -460,8 +617,8 @@ body{
 
 .multiviaHgroup {}
 
-.multiviaHgroup1  {width: 64%;}
-.subtitle {font-size: 1rem;}
+.multiviaHgroup1  {width: var(--multiviaHgroup1Width);}
+.subtitle {font-size: .9rem;}
 .subtitle1 {margin: .5rem 0;}
 
 .novedadMundial {
@@ -476,6 +633,11 @@ body{
 .blackSmallerTitle {
   font-size: .7rem;
   color: black;
+}
+
+.section1Title {
+  font-size: .9rem;
+  letter-spacing: 1px;
 }
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -505,9 +667,9 @@ body{
 
 .dosPuntos{
   font-size: 4rem;
-  /* transform: scaleY(2); */
   grid-row: span 2;
   width: min-content;
+  margin-top: -1.2rem;
 }
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -646,7 +808,7 @@ body{
 
 .landingSkew {
   position: absolute;
-  width:20%;
+
   transform-origin: 0 0;
   transform: skewX(-25deg);
   background: #AAA;
@@ -654,15 +816,16 @@ body{
   display: flex;
 }
 .skew1 {
-  height: 4.5rem;
-  z-index: 3;
-  box-shadow: 2px 2px 8px 6px rgba(0,0,0,0.5), 8px 5px 6px 0px rgba(255,255,255,0.4);
   background: #9B9B9B;
+  box-shadow: 2px 2px 8px 6px rgba(0,0,0,0.5), 8px 5px 6px 0px rgba(255,255,255,0.4);
+  height: 4.5rem;
+  width: var(--sekw1Width);
+  z-index: 3;
 }
 
 .skew2 {
   height: 1.9rem;
-  width:calc(20% + 3rem);
+  width:calc(var(--sekw1Width) + 3rem);
   background: var(--color1);
   z-index: 2;
   box-shadow: 5px 5px 6px -1px rgba(0,0,0,0.5);
@@ -672,13 +835,13 @@ body{
   background: white;
   height: 2.1rem;
   display: flex;
-  top: 1.6rem;
+  top: var(--skew3Top);
   left: 0;
   z-index: 1;
-  width:calc(20% + 14rem);
+  width: var(--skew3Width);
 }
 
-.landingSkew.skew3 {
+.skew3 {
   justify-content: flex-end;
 }
 
@@ -714,8 +877,9 @@ body{
 }
 
 .skewContainer2 {
-  margin-top: 13rem;
+  margin-top: var(--skewContainer2MarginTop);
   width: var(--skewContainer2Width);
+  font-size: .9rem;
 }
 .skewInverse3 {
   background: #9B9B9B;
@@ -797,8 +961,8 @@ body{
 .CTA1 {
   border-bottom: solid 3px var(--color1);
   display: flex;
-  margin-top: 1rem;
-  width: 64%;
+  margin-top: var(--CTA1MarginTop);
+  width: var(--CTA1Width);
   flex-wrap: wrap;
 }
 
@@ -807,13 +971,18 @@ body{
   color: white;
   text-decoration: none;
   height: min-content;
-  margin: auto 3rem 1rem auto;
   font-size:.8rem;
+}
+
+.descargaCatalogo1 {
+  margin: var(--descargaCatalogo1Margin);
+  width: var(--descargaCatalogo1Width);
+  justify-content: center;
 }
 
 .descargaIcon {height: 2.5rem}
 .descargaIconTxt {
-  line-height: .9rem;
+  line-height: var(--descargaIconTxtLineHeight);
   align-self: flex-end;
   margin-left: .5rem;
 }
