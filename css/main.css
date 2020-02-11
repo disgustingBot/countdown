@@ -148,6 +148,7 @@ FIN DE MAPA DE CONTENIDOS */
     /* Estructura */
 
     --countViewPadding: 6rem 2rem;
+
   }
 }
 
@@ -161,6 +162,19 @@ FIN DE MAPA DE CONTENIDOS */
     --sizeR: calc(calc(var(--sizeRc) * 1px) + (var(--sizeRd) - var(--sizeRc)) * ((100vw - 768px) / (1200 - 768)));
 
 
+    /* --------------------------------------------------------------
+    ------------------------Landing----------------------------------
+    ---------------------------------------------------------------*/
+
+    /* Componentes */
+
+    --atfBgTop: 14rem;
+    --atfBgWidth: 65%;
+
+    /* Skews */
+
+    --skewInverseContainerWidth: 65%;
+    --skewInverseContainerMarginTop: 1rem;
 
   }
 }
@@ -196,6 +210,23 @@ FIN DE MAPA DE CONTENIDOS */
 
     /* Estructura */
     --countViewPadding: 5rem;
+
+
+    /* --------------------------------------------------------------
+    ------------------------Landing----------------------------------
+    ---------------------------------------------------------------*/
+
+    /* Componentes */
+
+    --atfBgTop: 10rem;
+    --atfBgWidth: 70%;
+
+    /* Skews */
+    --skewContainer2Width: 50%;
+    --skewInverseContainerWidth: 40%;
+    --skewInverseContainerMarginTop: 1rem;
+
+
   }
 }
 
@@ -213,6 +244,18 @@ h1, h2, h3, h4, h5, h6, .thisIsATitleToo {
 @media  screen and (min-width: 1200px) {
   :root {
     --sizeR: calc(var(--sizeRd) * 1px);
+
+    /* --------------------------------------------------------------
+    ------------------------Landing----------------------------------
+    ---------------------------------------------------------------*/
+
+    /* Componentes */
+
+    --atfBgTop: 7rem;
+    --atfBgWidth: 80%;
+
+    /* Skews */
+    --skewContainer2Width: 50%;
   }
 }
 
@@ -329,6 +372,16 @@ body{
   flex-wrap: wrap;
   align-items: flex-end;
   position: relative;
+  padding-bottom: 1rem;
+}
+
+/* SEPARATORS */
+.separator {
+  background: var(--color1);
+  border: none;
+  height: .15rem;
+  margin: auto;
+  width: 60%;
 }
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -358,9 +411,9 @@ body{
 
 .atfBg {
   position: absolute;
-  top: 6rem;
+  top: var(--atfBgTop);
   left: 0;
-  width: 80%;
+  width: var(--atfBgWidth);
   z-index: -1;
 }
 
@@ -414,7 +467,8 @@ body{
 
 .novedadMundial {
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
   line-height: 1.4rem;
 }
 
@@ -637,16 +691,17 @@ body{
 .skewInverse {transform: skewX(-25deg); transform-origin: bottom;}
 .skewInverse1 {
   background: var(--color1);
-  padding: .5rem;
+  padding: .2rem .5rem;
   padding-left: 2rem;
   box-shadow: 5px 5px 6px -1px rgba(0,0,0,0.5);
   z-index: 2;
   position: relative;
 }
 .skewInverseContainer {
-  width: 40%;
+  width: var(--skewInverseContainerWidth);
   display: flex;
   flex-direction: column;
+  margin-top: var(--skewInverseContainerMarginTop);
 }
 .skewInverse2 {
   background: white;
@@ -660,12 +715,12 @@ body{
 }
 
 .skewContainer2 {
-  margin-top: 15rem;
-  width: 30%;
+  margin-top: 13rem;
+  width: var(--skewContainer2Width);
 }
 .skewInverse3 {
   background: #9B9B9B;
-  padding: 1rem;
+  padding:.75rem 1rem;
   position: relative;
   z-index: 2;
   box-shadow: 5px 5px 6px -1px rgba(0,0,0,0.5);
