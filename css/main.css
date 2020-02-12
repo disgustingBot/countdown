@@ -95,11 +95,22 @@ FIN DE MAPA DE CONTENIDOS */
   --checkBoxNormsSize: .7rem;
   --checkNormsPadding: 1.1rem;
 
+  --certificadosImgWidth: 90%;
+  --section1CaptionPadding: 2rem 1rem 0 1rem;
+  --section2CaptionPadding: 2rem 1rem 0 1rem;
+  --certificadosImgMargin: unset;
+
+  --hrSeparatorMargin: .5rem auto;
+  --descargaCatalogo2Margin: .5rem auto;
   /* Estructura */
 
   --countViewPadding: 8rem 1rem;
-  --section1Caption: 100%;
-  --section1CaptionPadding: 2rem 1rem 0 1rem;
+  --sectionCaption: 100%;
+  --section2CaptionWidth: 100%;
+
+  --separatorCTAFlexDirection: column;
+  --section4Padding: 2rem 0;
+
 
   /* --------------------------------------------------------------
   ------------------------Landing----------------------------------
@@ -116,12 +127,28 @@ FIN DE MAPA DE CONTENIDOS */
   --multiviaHRLogoMargin: auto;
   --frontaltry1Display: none;
   --frontaltry12Display: block;
-  --frontalTray1Display: 60%;
+  --frontalTray2Display: none;
+  --frontalTray22Display: block;
+  --frontalTray1Width: 60%;
   --frontalTryal1Margin: auto;
+  --frontalTray2Width: 90%;
+  --certificadosImgDisplay: 90%;
+  --logoSection3Margin: 1rem auto;
 
   /* Estructura */
   --section1Direction: column;
+  --section2Direction: column;
   --sectionTxtTextAlign: justify;
+
+  --section3GridAutoFlow: unset;
+  --section3Padding: 2rem 1rem;
+  --resistenciaTitleMarginTop: 2rem;
+
+  --section5FlexDirection: column;
+  --formContainerWidth: 90%;
+  --marginBottomLogoBottom: 20rem;
+
+
 
   /* Skews */
   --sekw1Width: 40%;
@@ -184,7 +211,20 @@ FIN DE MAPA DE CONTENIDOS */
     --checkNorms: .5rem;
     --formMarginBottom: 15rem;
 
+    --certificadosImgWidth: 40%;
+    --section2CaptionWidth: 60%;
+    --certificadosImgMargin: auto;
+
+    --descargaCatalogo2Margin: auto auto auto 5.5rem;
+    --hrSeparatorMargin: auto 2.5rem auto auto;
+
+    --frontalTray2Width: 70%;
+
     /* Estructura */
+    --section2Direction: row;
+    --separatorCTAFlexDirection: row;
+    --formContainerWidth: 70%;
+
 
     /* --------------------------------------------------------------
     ------------------------Landing----------------------------------
@@ -213,7 +253,15 @@ FIN DE MAPA DE CONTENIDOS */
 
     /* Estructura */
 
+    --section3SpecialPadding: 1rem;
+    --section3GridGap: 1rem;
+    --section3Padding: 2rem 1rem;
 
+    --section3GridAutoFlow: column;
+    --resistenciaTitleMarginTop: ;
+    --section5FlexDirection: row;
+    --formContainerWidth: 50%;
+    --marginBottomLogoBottom: 25rem;
 
 
     /* Componentes */
@@ -223,6 +271,9 @@ FIN DE MAPA DE CONTENIDOS */
     --atfBgLeft: 0;
     --atfBgTransform: unset;
     --frontalTryal1Margin: auto;
+    --logoSection3Margin: 1rem 5rem 1rem auto;
+    --frontalTray2Width: 50%;
+
 
 
     /* Skews */
@@ -266,6 +317,11 @@ FIN DE MAPA DE CONTENIDOS */
     --checkBoxNormsSize: .3rem;
     --checkNormsPadding: .7rem;
 
+    --certificadosImgMargin: unset;
+
+    --frontalTray2Width: 30%;
+    --frontalTray2Margin: auto;
+
 
     /* Estructura */
     --countViewPadding: 5rem;
@@ -277,9 +333,15 @@ FIN DE MAPA DE CONTENIDOS */
 
     /* Estructura */
     --section1Direction: row;
-    --section1Caption: 70%;
+    --sectionCaption: 70%;
+    --certificadosImgWidth: 32%;
+    --section2CaptionWidth: 68%;
     --section1CaptionPadding: 2rem 1rem 2rem 3rem;
+    --section2CaptionPadding: 2rem 3rem 2rem 2rem;
+
     --sectionTxtTextAlign: left;
+
+
 
     /* Componentes */
 
@@ -290,7 +352,10 @@ FIN DE MAPA DE CONTENIDOS */
     --multiviaHgroup1Width: 64%;
     --frontaltry1Display: block;
     --frontaltry12Display: none;
-    --frontalTray1Display: 35%;
+    --frontalTray2Display: block;
+    --frontalTray22Display: none;
+    --frontalTray1Width: 35%;
+    --certificadosImgDisplay: 30%;
 
     /* Skews */
     --skewContainer2Width: 45%;
@@ -325,11 +390,20 @@ h1, h2, h3, h4, h5, h6, .thisIsATitleToo {
     ------------------------Landing----------------------------------
     ---------------------------------------------------------------*/
 
+    /* Estructura */
+    --section3SpecialPadding: 1rem;
+    --section3GridGap: 3rem;
+    --section3Padding: 2rem 3rem;
+
     /* Componentes */
 
     --atfBgTop: 7rem;
     --atfBgWidth: 80%;
     --frontalTryal1Margin: unset;
+
+    --frontalTray2Margin: 0 auto auto 0;
+
+    --formContainerWidth: 30%;
 
     /* Skews */
     --skewContainer2Width: 32%;
@@ -365,6 +439,12 @@ h1, h2, h3, h4, h5, h6, .thisIsATitleToo {
     /* Componentes */
     --atfBgTop: 3rem;
     --atfBgWidth: 50%;
+    --certificadosImgWidth: 20%;
+
+    --section1CaptionPadding: 4rem 6rem;
+    --section2Padding: 2rem 0;
+    --section2CaptionPadding: 2rem 6rem;
+    --section4Padding: 2rem 0;
 
     /* Skews */
     --skewContainer2MarginTop: 8rem;
@@ -488,6 +568,7 @@ body{
 }
 
 /* SEPARATORS */
+
 .separator {
   background: var(--color1);
   border: none;
@@ -497,16 +578,71 @@ body{
 }
 
 
-/* Landing Sections */
-
-.section1 {
+.separatorCTA {
+  width: 100%;
+  height: 100px;
   display: flex;
-  flex-direction: var(--section1Direction);
+  flex-direction: var(--separatorCTAFlexDirection);
+  background: var(--color1);
 }
 
-.section1Caption {
-  width: var(--section1Caption);
-  padding: var(--section1CaptionPadding);
+
+/* Landing Sections */
+
+/* Section 1 */
+.section {display: flex;}
+.section1 {flex-direction: var(--section1Direction);}
+
+/* section 2 */
+.section2 {
+  flex-direction: var(--section2Direction);
+  padding: var(--section2Padding);
+}
+
+.sectionCaption {width: var(--sectionCaption);}
+.section1Caption {padding: var(--section1CaptionPadding);}
+.section2Caption {padding: var(--section2CaptionPadding);}
+
+/* section 3 */
+.section3 {
+  display: grid;
+  grid-template-rows: repeat(7, auto);
+  grid-auto-flow: var(--section3GridAutoFlow);
+  padding: var(--section3Padding);
+  grid-column-gap: var(--section3GridGap);
+  color: white;
+  grid-row-gap: .75rem;
+}
+
+.section3>*:not(.section3LowerInfo) {
+  padding-right: var(--section3SpecialPadding);
+}
+.section3 .sectionTxt {margin:unset;}
+
+/* Section 4 */
+
+.section4 {
+  flex-wrap: wrap;
+  padding: var(--section4Padding);
+}
+
+.section5 {flex-direction: var(--section5FlexDirection)}
+
+.section6 {
+  flex-direction: column;
+  height: max-content;
+  position: relative;
+  color: white;
+}
+
+.section6 .background1 {
+  bottom: 0;
+  top: 0;
+}
+
+.section6 .form {
+  width: 100%;
+  margin: 0;
 }
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -534,12 +670,17 @@ body{
 .hrLogo {
   height: 2rem;
   margin: auto;
-  margin-right: 1rem;
+  margin-right: 3rem;
+}
+
+.hrSeparator {
+  height: 2.6rem;
+  margin: var(--hrSeparatorMargin);
 }
 
 .multiviaHRLogo {
   margin: var(--multiviaHRLogoMargin);
-  height: 6.5rem;
+  height: 6rem;
 }
 
 .atfBg {
@@ -554,7 +695,7 @@ body{
 
 .sectionTxt {
   color: white;
-  font-size: .75rem;
+  font-size: .7rem;
   margin: .75rem 0;
   line-height: 1rem;
   text-align: var(--sectionTxtTextAlign)
@@ -565,11 +706,87 @@ body{
 
 .frontalTray1 {
   object-fit: contain;
-  width: var(--frontalTray1Display);
+  width: var(--frontalTray1Width);
   height: 100%;
   margin: var(--frontalTryal1Margin);
   margin-bottom: auto;
-  padding: 0 0 2rem 0;
+  padding-bottom: 2rem;
+}
+
+
+
+.frontalTray2 {
+  display: var(--frontalTray2Display);
+  object-fit: contain;
+  height: 100%;
+  width: var(--frontalTray2Width);
+  margin: var(--frontalTray2Margin);
+
+}
+
+.frontalTray22 {
+  display: var(--frontalTray22Display);
+  margin: auto;
+  margin-top: -3rem;
+  position: relative;
+  z-index: -1;
+  width: 90%;
+}
+
+
+
+.certificadosImg {
+  object-fit: contain;
+  height: 100%;
+  width: var(--certificadosImgWidth);
+  padding-top: 2rem;
+  margin: var(--certificadosImgMargin);
+}
+
+.gigantBorderLeft {
+  border-left: solid .6rem var(--color1);
+  margin: auto 0;
+}
+
+.gigantBorderLeft>* {margin: .6rem 0; padding-left: .5rem;}
+.yellowTxt {color: var(--color1)}
+.tinyTxt {font-size: .4rem}
+.lowerInfoTxt {font-size: .6rem}
+
+.section3LowerInfo {
+  display: grid;
+  grid-template-rows: min-content auto;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-column-gap: .3rem;
+}
+.logoSection3 {
+  height: 1.5rem;
+  margin: var(--logoSection3Margin);
+  grid-column: span 3;
+}
+
+.roastImg {
+  width: 100%;
+}
+
+.InfoTxt {
+  padding: 0 .3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.RoHSImg {
+  object-fit: contain;
+  height: 5rem;
+  width: auto;
+  margin: 5rem 1rem;
+}
+
+.bottomLogoLanding {
+  width: 25%;
+  margin: auto;
+  margin-bottom: var(--marginBottomLogoBottom);
 }
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -604,8 +821,6 @@ body{
   text-transform: lowercase;
 }
 
-
-
 .AltaRecistenciaTitle {
   margin-bottom: 3rem;
   margin-top: 1rem;
@@ -635,9 +850,13 @@ body{
   color: black;
 }
 
-.section1Title {
+.sectionTitle {
   font-size: .9rem;
   letter-spacing: 1px;
+}
+
+.resistenciaTitle {
+  margin-top: var(--resistenciaTitleMarginTop);
 }
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
@@ -740,8 +959,6 @@ body{
 .formInputs input:valid + .labelName .contentName{
   transform:translateY(-80%);
   font-size: .6rem;
-  /* color:#5fa8d3; */
-  /* color:white; */
 }
 
 .formInputs input:focus + .labelName::after,
@@ -779,6 +996,13 @@ body{
   float: right;
   padding: .2rem;
   text-transform: uppercase;
+}
+
+/* FORM LANDING PAGE */
+
+.formContainer {
+  width: var(--formContainerWidth);
+  margin: 2rem auto;
 }
 
 
@@ -981,8 +1205,16 @@ body{
 }
 
 .descargaIcon {height: 2.5rem}
+
 .descargaIconTxt {
   line-height: var(--descargaIconTxtLineHeight);
   align-self: flex-end;
   margin-left: .5rem;
+}
+
+.descargaCatalogoBlack {color: black!important}
+
+.descargaCatalogo2 {
+  margin: auto;
+  margin: var(--descargaCatalogo2Margin);
 }
