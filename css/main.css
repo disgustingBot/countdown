@@ -266,7 +266,7 @@ FIN DE MAPA DE CONTENIDOS */
 
     /* Componentes */
     --atfBgWidth: 65%;
-    --atfBgTop: 23rem;
+    --atfBgTop: 17rem;
     --atfBgPosition: absolute;
     --atfBgLeft: 0;
     --atfBgTransform: unset;
@@ -286,6 +286,7 @@ FIN DE MAPA DE CONTENIDOS */
 
     /* Titles */
 
+    --descargaCatalogo1Width: unset;
   }
 }
 
@@ -650,6 +651,7 @@ body{
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
 .english {color: #AAA!important;}
+.separatorCTA .english{color: #222!important}
 .darkEnglish {color: #65635F;}
 .mainLogo {
   position: absolute;
@@ -670,7 +672,7 @@ body{
 .hrLogo {
   height: 2rem;
   margin: auto;
-  margin-right: 3rem;
+  /* margin-right: 3rem; */
 }
 
 .hrSeparator {
@@ -768,6 +770,7 @@ body{
 .roastImg {
   width: 100%;
 }
+figure.viatecRoast p, figure.viafilRoast p{font-size:.8rem}
 
 .InfoTxt {
   padding: 0 .3rem;
@@ -953,6 +956,7 @@ body{
   color:#A0A0A0;
   font-size: .6rem;
   opacity: .7;
+  font-family: 'Poppins', sans-serif;
 }
 
 .formInputs input:focus + .labelName .contentName,
@@ -1041,7 +1045,9 @@ body{
 }
 .skew1 {
   background: #9B9B9B;
-  box-shadow: 2px 2px 8px 6px rgba(0,0,0,0.5), 8px 5px 6px 0px rgba(255,255,255,0.4);
+  box-shadow:
+    2px 2px 8px 6px rgba(0,0,0,0.5);
+    /* 8px 5px 6px 0px rgba(255,255,255,0.4); */
   height: 4.5rem;
   width: var(--sekw1Width);
   z-index: 4;
@@ -1218,3 +1224,9 @@ body{
   margin: auto;
   margin: var(--descargaCatalogo2Margin);
 }
+
+
+
+
+
+.g-recaptcha{margin:.5rem 0}
