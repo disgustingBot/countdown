@@ -109,7 +109,7 @@ FIN DE MAPA DE CONTENIDOS */
   --section2CaptionWidth: 100%;
 
   --separatorCTAFlexDirection: column;
-  --section4Padding: 2rem 0;
+  --section4Padding: 0;
 
 
   /* --------------------------------------------------------------
@@ -1044,14 +1044,14 @@ body{
   box-shadow: 2px 2px 8px 6px rgba(0,0,0,0.5), 8px 5px 6px 0px rgba(255,255,255,0.4);
   height: 4.5rem;
   width: var(--sekw1Width);
-  z-index: 3;
+  z-index: 4;
 }
 
 .skew2 {
   height: 1.9rem;
   width:calc(var(--sekw1Width) + 3rem);
   background: var(--color1);
-  z-index: 2;
+  z-index: 3;
   box-shadow: 5px 5px 6px -1px rgba(0,0,0,0.5);
 }
 
