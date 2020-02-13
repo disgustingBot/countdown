@@ -101,6 +101,7 @@ FIN DE MAPA DE CONTENIDOS */
   --certificadosImgMargin: unset;
 
   --hrSeparatorMargin: .5rem auto;
+  --hrSeparatorHeight: 3.2rem;
   --descargaCatalogo2Margin: .5rem auto;
   /* Estructura */
 
@@ -109,6 +110,8 @@ FIN DE MAPA DE CONTENIDOS */
   --section2CaptionWidth: 100%;
 
   --separatorCTAFlexDirection: column;
+  --separatorCTAHeight: 150px;
+  --descargaCatalogoFontSize: 1.2rem;
   --section4Padding: 0;
 
 
@@ -162,7 +165,8 @@ FIN DE MAPA DE CONTENIDOS */
   --descargaCatalogo1Margin: 1rem auto;
   --descargaCatalogo1Width: 80%;
   --CTA1MarginTop: 6rem;
-  --descargaIconTxtLineHeight: 1rem;
+  --descargaIconTxtLineHeight: 1.5rem;
+  --descargaIconTxtAlignment: space-evenly;
 
   /* Titles */
   --multiviaHgroup1Width: 95%;
@@ -217,12 +221,15 @@ FIN DE MAPA DE CONTENIDOS */
 
     --descargaCatalogo2Margin: auto auto auto 5.5rem;
     --hrSeparatorMargin: auto 2.5rem auto auto;
+    --hrSeparatorHeight: 2.6rem;
 
     --frontalTray2Width: 70%;
 
     /* Estructura */
     --section2Direction: row;
     --separatorCTAFlexDirection: row;
+    --separatorCTAHeight: 100px;
+    --descargaCatalogoFontSize: unset;
     --formContainerWidth: 70%;
 
 
@@ -368,7 +375,8 @@ FIN DE MAPA DE CONTENIDOS */
     --descargaCatalogo1Margin: auto 3rem 1rem auto;
     --descargaCatalogo1Width: unset;
     --CTA1MarginTop: 1rem;
-    --descargaIconTxtLineHeight: .9rem;
+    --descargaIconTxtLineHeight: 1rem;
+    --descargaIconTxtAlignment: flex-end;
   }
 }
 
@@ -581,12 +589,13 @@ body{
 
 .separatorCTA {
   width: 100%;
-  height: 100px;
+  height: var(--separatorCTAHeight);
   display: flex;
   flex-direction: var(--separatorCTAFlexDirection);
   background: var(--color1);
 }
 
+.separatorCTA .descargaCatalogo {font-size: var(--descargaCatalogoFontSize);}
 
 /* Landing Sections */
 
@@ -676,7 +685,7 @@ body{
 }
 
 .hrSeparator {
-  height: 2.6rem;
+  height: var(--hrSeparatorHeight);
   margin: var(--hrSeparatorMargin);
 }
 
@@ -770,7 +779,7 @@ body{
 .roastImg {
   width: 100%;
 }
-figure.viatecRoast p, figure.viafilRoast p{font-size:.8rem}
+figure.viatecRoast p, figure.viafilRoast p{font-size:.6rem}
 
 .InfoTxt {
   padding: 0 .3rem;
@@ -861,6 +870,8 @@ figure.viatecRoast p, figure.viafilRoast p{font-size:.8rem}
 .resistenciaTitle {
   margin-top: var(--resistenciaTitleMarginTop);
 }
+
+.section1Title {text-align: var(--sectionTxtTextAlign);}
 /* ---------------------------------------------------------------------------
 ------------------------------------------------------------------------------
                               6.2) =Count Down:
@@ -1214,7 +1225,7 @@ figure.viatecRoast p, figure.viafilRoast p{font-size:.8rem}
 
 .descargaIconTxt {
   line-height: var(--descargaIconTxtLineHeight);
-  align-self: flex-end;
+  align-self: var(--descargaIconTxtAlignment);
   margin-left: .5rem;
 }
 
