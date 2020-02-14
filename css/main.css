@@ -114,6 +114,8 @@ FIN DE MAPA DE CONTENIDOS */
   --descargaCatalogoFontSize: 1.2rem;
   --section4Padding: 0;
 
+  --headerSubLogoAuxMargin: -.05rem;
+
 
   /* --------------------------------------------------------------
   ------------------------Landing----------------------------------
@@ -136,7 +138,7 @@ FIN DE MAPA DE CONTENIDOS */
   --frontalTryal1Margin: auto;
   --frontalTray2Width: 90%;
   --certificadosImgDisplay: 90%;
-  --logoSection3Margin: 1rem auto;
+  --logoSection3Margin: 1rem auto .3rem 0;
 
   /* Estructura */
   --section1Direction: column;
@@ -240,6 +242,7 @@ FIN DE MAPA DE CONTENIDOS */
     /* Componentes */
 
     --mainLogoLandingTop: 0rem;
+    --headerSubLogoAuxMargin: 1rem;
 
   }
 }
@@ -278,7 +281,7 @@ FIN DE MAPA DE CONTENIDOS */
     --atfBgLeft: 0;
     --atfBgTransform: unset;
     --frontalTryal1Margin: auto;
-    --logoSection3Margin: 1rem 5rem 1rem auto;
+    --logoSection3Margin: 1rem auto .3rem 0;
     --frontalTray2Width: 50%;
 
 
@@ -659,7 +662,7 @@ body{
                               6) =COMPONENTES:
 ------------------------------------------------------------------------------
 --------------------------------------------------------------------------- */
-.english {color: #AAA!important;}
+.english {color: #AAA!important; font-style: italic!important;}
 .separatorCTA .english{color: #222!important}
 .darkEnglish {color: #65635F;}
 .mainLogo {
@@ -771,9 +774,12 @@ body{
   grid-column-gap: .3rem;
 }
 .logoSection3 {
-  height: 1.5rem;
+  height: 1.2rem;
+  width: auto;
   margin: var(--logoSection3Margin);
   grid-column: span 3;
+  object-fit: contain;
+  object-position: left;
 }
 
 .roastImg {
@@ -985,7 +991,9 @@ figure.viatecRoast p, figure.viafilRoast p{font-size:.6rem}
   font-size: var(--checkNorms);
   position: relative;
   padding-left: var(--checkNormsPadding);
+  font-family: 'Poppins', sans-serif;
 }
+
 .checkNorms::after{
   content: "";
   width:  var(--checkBoxNormsSize);
@@ -1090,7 +1098,7 @@ figure.viatecRoast p, figure.viafilRoast p{font-size:.6rem}
   height: 1rem;
   margin: auto 1rem;
 }
-
+.headerSubLogo:nth-child(1) {margin-right: var(--headerSubLogoAuxMargin);}
 .skewInverse {transform: skewX(-25deg); transform-origin: bottom;}
 .skewInverse1 {
   background: var(--color1);
@@ -1228,6 +1236,8 @@ figure.viatecRoast p, figure.viafilRoast p{font-size:.6rem}
   align-self: var(--descargaIconTxtAlignment);
   margin-left: .5rem;
 }
+
+.descargaIconTxt .english {font-size: .7rem;}
 
 .descargaCatalogoBlack {color: black!important}
 
