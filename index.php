@@ -37,8 +37,16 @@
   </script>
 </head>
 <body id="view">
-
-
+  
+  <?php if (isset($_GET['mail']) AND $_GET['mail']=='success') { ?>
+    <div class="mailSuccess" id="mailSuccess">
+      <p>¡Muchas gracias! En breve nos pondremos en contacto contigo.</p>
+      <button class="logFormClose" type="button" onclick="altClassFromSelector('alt','#mailSuccess')">
+        <div class="logFormCloseLine"></div>
+        <div class="logFormCloseLine"></div>
+      </button>
+    </div>
+  <?php } ?>
 
 
   <view class="landingView">
@@ -542,6 +550,7 @@ c0.3,0.3,0.8,0.9,0.8,2.1c0,0.2,0,0.5-0.1,0.8L92.7,44.1z"/>
 
     }, 1000);
   </script>
+	<script type="text/javascript" src="js/custom.js?v=3.2"></script>
 
 </body>
 </html>

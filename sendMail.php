@@ -97,8 +97,8 @@ if($_POST['a9'] != ""){
     $mail->SMTPAuth = true;                              // Enable SMTP authentication
     // $mail->Username = 'idemo@idemomotors.com';           // SMTP username
     // $mail->Password = 'Idemomotors25';                   // SMTP password
-    $mail->Username = 'test@multiviahr.info';       // SMTP username
-    $mail->Password = 'X]f[uHK[[8TB';            // SMTP password
+    $mail->Username = 'formulario@multiviahr.info';       // SMTP username
+    $mail->Password = '1nTr-Fl3x20';            // SMTP password
     $mail->SMTPSecure = 'ssl';                           // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 465;                                   // TCP port to connect to
     $mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ));
@@ -106,7 +106,7 @@ if($_POST['a9'] != ""){
     //Recipients
     $mail->setFrom('test@multiviahr.info', 'Consultas Interflex');
     // $mail->addAddress('molinerozadkiel@gmail.com', 'Markus');        // Add a recipient
-    $mail->addAddress('molinerozadkiel@gmail.com', 'Interflex');             // Add a recipient
+    $mail->addAddress('asist.tecnica@interflex.es', 'Interflex');             // Add a recipient
     // $mail->addAddress($email_address, $first_name);               // Add a recipient
     // $mail->addAddress('ellen@example.com');                       // Name is optional
     $mail->addReplyTo('webdesign@mediactiu.com', 'Consultas Interflex');
@@ -140,6 +140,7 @@ if($_POST['a9'] != ""){
 
     // header( "Location: $thankyou_page" );
     // header( "Location: index.php?mail=success" );
+    // var_dump($mail)
     header( "Location: https://multiviahr.info/?mail=success" );
     $mail->send();
     exit;
