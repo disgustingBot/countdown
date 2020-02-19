@@ -1249,3 +1249,56 @@ figure.viatecRoast p, figure.viafilRoast p{font-size:.6rem}
 
 
 .g-recaptcha{margin:.5rem 0}
+
+
+
+
+
+
+
+
+
+
+
+.mailSuccess{
+  position:fixed;
+  /* top:0; */
+  top:0;
+  width:100%;
+  z-index:1000;
+  background:white;
+  transform:translateY(0);
+  transition:.4s;
+  padding: .3rem 1rem;
+  text-align: center;
+  font-weight: bold;
+  background: var(--color1);
+}
+.mailSuccess.alt{
+  transform:translateY(-110%);
+}
+.mailSuccess p{padding-right:30px}
+
+
+.logFormClose{
+  position: absolute;
+  top:.3rem;
+  right:1rem;
+  height:30px;
+  width: 30px;
+  background: none;
+  border:none;
+  cursor:pointer;
+}
+.logFormCloseLine{
+  position: absolute;
+  top:50%;
+  /* left:50%; */
+  width:100%;
+  height:2px;
+  background:black;
+  transition:.3s;
+  transform:rotate(45deg);
+}
+.logFormCloseLine:first-child{transform:rotate(-45deg);}
+.logFormClose:hover .logFormCloseLine{background:var(--color1)}
