@@ -28,8 +28,6 @@ $feedback_page = "index.php";
 
 
 
-// WG-Gesucht numero de anuncio:
-// 6614626
 
 /*This next bit loads the form field data into variables.
 If you add a form field, you will need to add it here.*/
@@ -46,6 +44,7 @@ $lst = $_POST['a2'];
 $cny = $_POST['a3'];
 $eml = $_POST['a4'];
 $phn = $_POST['a5'];
+$rch = $_POST['recaptcha'];
 // $tyc = $_POST['a6'];
 if($_POST['a6']=='on'){$tyc=1;}else{$tyc=0;}
 $timestamp = date("Y-m-d H:i:s");
@@ -54,6 +53,32 @@ if($_POST['a9'] != ""){
   header( "Location: https://multiviahr.info/?mail=nope" . $_POST['a9'] );
   exit;
 } else {
+
+
+
+
+  $site = '6LdrMsgUAAAAALibglcP8-LSLA7YMkVUorWUnq4l';
+  $scrt = '6LdrMsgUAAAAANLWAiRMTvl5p9CcpNyMV2d6712O';
+
+  if (isset($_POST['submit'])) {
+    $response = $_POST['g-recaptcha-response'];
+    $payload = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$scrt.'&response='.$response);
+    // echo $payload;
+    $result = json_decode($payload,true);
+    if ($result['success']!=1) {
+      // code...
+      header( "Location: https://multiviahr.info/?mail=BOT" );
+      // echo 'you are evil or a bott';
+      exit;
+      // return false;
+    } else {
+
+
+
+
+
+
+
 
 
 
@@ -84,72 +109,81 @@ if($_POST['a9'] != ""){
 
 
 
-  //______________________________Datos guardados en variables____________________________________
-  //___________________________ENVIO el mail a quien corresponda__________________________________
+      //______________________________Datos guardados en variables____________________________________
+      //___________________________ENVIO el mail a quien corresponda__________________________________
 
-  $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
-  try {
-    //Server settings
-    $mail->SMTPDebug = 4;                                // Enable verbose debug output
-    $mail->isSMTP();                                     // Set mailer to use SMTP
-    // $mail->Host = 'smtp.lattedev.com';                // Specify main and backup SMTP servers
-    $mail->Host = gethostbyname('webmail.multiviahr.info'); // Specify main and backup SMTP servers
-    $mail->SMTPAuth = true;                              // Enable SMTP authentication
-    // $mail->Username = 'idemo@idemomotors.com';           // SMTP username
-    // $mail->Password = 'Idemomotors25';                   // SMTP password
-    $mail->Username = 'formulario@multiviahr.info';       // SMTP username
-    $mail->Password = '1nTr-Fl3x20';            // SMTP password
-    $mail->SMTPSecure = 'ssl';                           // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 465;                                   // TCP port to connect to
-    $mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ));
+      $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+      try {
+        //Server settings
+        $mail->SMTPDebug = 4;                                // Enable verbose debug output
+        $mail->isSMTP();                                     // Set mailer to use SMTP
+        // $mail->Host = 'smtp.lattedev.com';                // Specify main and backup SMTP servers
+        $mail->Host = gethostbyname('webmail.multiviahr.info'); // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                              // Enable SMTP authentication
+        // $mail->Username = 'idemo@idemomotors.com';           // SMTP username
+        // $mail->Password = 'Idemomotors25';                   // SMTP password
+        $mail->Username = 'formulario@multiviahr.info';       // SMTP username
+        $mail->Password = '1nTr-Fl3x20';            // SMTP password
+        $mail->SMTPSecure = 'ssl';                           // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 465;                                   // TCP port to connect to
+        $mail->SMTPOptions = array( 'ssl' => array( 'verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true ));
 
-    //Recipients
-    $mail->setFrom('test@multiviahr.info', 'Consultas Interflex');
-    // $mail->addAddress('molinerozadkiel@gmail.com', 'Markus');        // Add a recipient
-    $mail->addAddress('asist.tecnica@interflex.es', 'Interflex');             // Add a recipient
-    // $mail->addAddress($email_address, $first_name);               // Add a recipient
-    // $mail->addAddress('ellen@example.com');                       // Name is optional
-    $mail->addReplyTo('webdesign@mediactiu.com', 'Consultas Interflex');
-    // $mail->addCC('cc@example.com');
-    // $mail->addBCC('bcc@example.com');
+        //Recipients
+        $mail->setFrom('test@multiviahr.info', 'Consultas Interflex');
+        // $mail->addAddress('molinerozadkiel@gmail.com', 'Markus');        // Add a recipient
+        $mail->addAddress('asist.tecnica@interflex.es', 'Interflex');             // Add a recipient
+        // $mail->addAddress($email_address, $first_name);               // Add a recipient
+        // $mail->addAddress('ellen@example.com');                       // Name is optional
+        $mail->addReplyTo('webdesign@mediactiu.com', 'Consultas Interflex');
+        // $mail->addCC('cc@example.com');
+        // $mail->addBCC('bcc@example.com');
 
-    //Attachments
-    // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+        //Attachments
+        // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+        // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
-    //Content
-    $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Nueva consulta de '.$a1;
-    $mail->Body    =
-      'nombre: '.$fst.'<br>'.
-      'apellido: '.$lst.'<br>'.
-      'empresa: '.$cny.'<br>'.
-      'e-mail: '.$eml.'<br>'.
-      'telefono: '.$phn.'<br>'.
-      'terms and conditions: '.$tyc.'<br>'.
-      'fecha y hora: '.$timestamp;
+        //Content
+        $mail->isHTML(true);                                  // Set email format to HTML
+        $mail->Subject = 'Nueva consulta de '.$a1;
+        $mail->Body    =
+          'nombre: '.$fst.'<br>'.
+          'apellido: '.$lst.'<br>'.
+          'empresa: '.$cny.'<br>'.
+          'e-mail: '.$eml.'<br>'.
+          'telefono: '.$phn.'<br>'.
+          'terms and conditions: '.$tyc.'<br>'.
+          'fecha y hora: '.$timestamp;
 
-    $mail->AltBody =
-      'nombre: '.$fst.'<br>'.
-      'apellido: '.$lst.'<br>'.
-      'empresa: '.$cny.'<br>'.
-      'e-mail: '.$eml.'<br>'.
-      'telefono: '.$phn.'<br>'.
-      'terms and conditions: '.$tyc.'<br>'.
-      'fecha y hora: '.$timestamp;
+        $mail->AltBody =
+          'nombre: '.$fst.'<br>'.
+          'apellido: '.$lst.'<br>'.
+          'empresa: '.$cny.'<br>'.
+          'e-mail: '.$eml.'<br>'.
+          'telefono: '.$phn.'<br>'.
+          'terms and conditions: '.$tyc.'<br>'.
+          'fecha y hora: '.$timestamp;
 
-    // header( "Location: $thankyou_page" );
-    // header( "Location: index.php?mail=success" );
-    // var_dump($mail)
-    header( "Location: https://multiviahr.info/?mail=success" );
-    $mail->send();
-    exit;
-  } catch (Exception $e) {
-    header( "Location: https://multiviahr.info/?mail=error" );
-    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
-      // header( "Location: index.php?mail=error" );
-    exit;
+        // header( "Location: $thankyou_page" );
+        // header( "Location: index.php?mail=success" );
+        // var_dump($mail)
+        header( "Location: https://multiviahr.info/?mail=success" );
+        $mail->send();
+        exit;
+      } catch (Exception $e) {
+        header( "Location: https://multiviahr.info/?mail=error" );
+        echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+          // header( "Location: index.php?mail=error" );
+        exit;
+      }
+    }
+
+
+
+    // header( "Location: https://multiviahr.info/?mail=HUMAN" );
+    // echo 'thank you';
+    // exit;
   }
 }
+
 //______________________________________$mail ENVIADO_________________________________________
 //__________________________________________GG_WP_____________________________________________?>
