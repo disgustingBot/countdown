@@ -37,7 +37,7 @@
   </script>
 </head>
 <body id="view">
-
+  
   <?php if (isset($_GET['mail']) AND $_GET['mail']=='success') { ?>
     <div class="mailSuccess" id="mailSuccess">
       <p>¡Muchas gracias! En breve nos pondremos en contacto contigo.</p>
@@ -320,11 +320,8 @@
               <span class="contentName">Teléfono / telephone</span>
             </label>
           </div>
-          <label class="checkNorms" for="checkNorms">
-            <input type="checkbox" name="a6" id="checkNorms" required>
-            <div class="señalizer"></div>
-            He leido y acepto la política de privacidad
-          </label>
+          <input type="checkbox" name="a6" id="checkNorms">
+          <label class="checkNorms" for="checkNorms">He leido y acepto la política de privacidad</label>
 
           <div class="g-recaptcha" data-sitekey="6LdrMsgUAAAAALibglcP8-LSLA7YMkVUorWUnq4l"></div>
 
