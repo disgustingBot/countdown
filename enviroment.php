@@ -1,0 +1,3 @@
+<?php
+  $_ENV['SITE_KEY']  ='6LdrMsgUAAAAALibglcP8-LSLA7YMkVUorWUnq4l';
+  $_ENV['SECRET_KEY']='6LdrMsgUAAAAANLWAiRMTvl5p9CcpNyMV2d6712O';

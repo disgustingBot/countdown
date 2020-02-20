@@ -1,3 +1,9 @@
+<?php
+$site = '6LdrMsgUAAAAALibglcP8-LSLA7YMkVUorWUnq4l';
+$scrt = '6LdrMsgUAAAAANLWAiRMTvl5p9CcpNyMV2d6712O';
+?>
+
+
   <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +43,11 @@
   </script>
 </head>
 <body id="view">
-  
+
+
+
+
+
   <?php if (isset($_GET['mail']) AND $_GET['mail']=='success') { ?>
     <div class="mailSuccess" id="mailSuccess">
       <p>¡Muchas gracias! En breve nos pondremos en contacto contigo.</p>
@@ -284,7 +294,14 @@
           <br>
           <span class="english sectionTxt">Do you want more information? Fill this form and we will contact you.</span>
         </p>
-        <form class="form bottomForm" action="sendMail.php" method="post">
+        <!-- <form class="form bottomForm" action="sendMail.php" method="post"> -->
+        <form class="form bottomForm" action="sendMail.php" method="POST" role="form">
+
+
+
+            <?php
+            ?>
+
 
           <div class="formInputs">
             <input type="text" name="a1" autocomplete="off" required>
@@ -323,11 +340,14 @@
           <input type="checkbox" name="a6" id="checkNorms">
           <label class="checkNorms" for="checkNorms">He leido y acepto la política de privacidad</label>
 
-          <div class="g-recaptcha" data-sitekey="6LdrMsgUAAAAALibglcP8-LSLA7YMkVUorWUnq4l"></div>
+          <!-- <div class="g-recaptcha" data-callback="captchaVerified" data-sitekey="6LdrMsgUAAAAALibglcP8-LSLA7YMkVUorWUnq4l"></div> -->
+          <div class="g-recaptcha" data-callback="captchaVerified" data-sitekey="<?php echo $site; ?>"></div>
+          <input class="recaptcha" type="text" hidden value="">
 
           <input type="text" name="a9" value="" placeholder="jeje" hidden>
           <!-- <input type="submit" value="Submit"> -->
-          <button class="butttonSend" type="submit" name="button">Enviar / <span class="english">send</span></button>
+          <button class="butttonSend" type="submit" name="submit" value="submit" disabled>Enviar / <span class="english">send</span></button>
+          <!-- <button class="butttonSend" type="submit" name="submit">Enviar / <span class="english">send</span></button> -->
         </form>
       </div>
 
@@ -518,37 +538,37 @@ c0.3,0.3,0.8,0.9,0.8,2.1c0,0.2,0,0.5-0.1,0.8L92.7,44.1z"/>
 
   <script>
   d=document;
-    // Set the date we're counting down to
-    var countDownDate = new Date("Jan 18, 2020 00:00:00").getTime();
-
-    // Update the count down every 1 second
-    var x = setInterval(()=>{
-
-      // Get today's date and time
-      var now = new Date().getTime();
-
-      // Find the distance between now and the count down date
-      var distance = countDownDate - now;
-      // If the count down is over, write some text
-      if (distance < 0) {
-        clearInterval(x);
-        d.getElementById("view").classList.add("expired");
-      }
-
-      // Time calculations for days, hours, minutes and seconds
-      var days = Math.floor( distance / (1000 * 60 * 60 * 24));
-      var hour = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var mnts = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var scds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      // Output the result in an element with id="demo"
-      // d.getElementById("demo").innerHTML = days + " : " + hour + " : " + mnts    + " : " + scds;
-      d.getElementById("days").innerHTML = days;
-      d.getElementById("hour").innerHTML = hour;
-      d.getElementById("mnts").innerHTML = mnts;
-      d.getElementById("scds").innerHTML = scds;
-
-    }, 1000);
+    // // Set the date we're counting down to
+    // var countDownDate = new Date("Jan 18, 2020 00:00:00").getTime();
+    //
+    // // Update the count down every 1 second
+    // var x = setInterval(()=>{
+    //
+    //   // Get today's date and time
+    //   var now = new Date().getTime();
+    //
+    //   // Find the distance between now and the count down date
+    //   var distance = countDownDate - now;
+    //   // If the count down is over, write some text
+    //   if (distance < 0) {
+    //     clearInterval(x);
+    //     d.getElementById("view").classList.add("expired");
+    //   }
+    //
+    //   // Time calculations for days, hours, minutes and seconds
+    //   var days = Math.floor( distance / (1000 * 60 * 60 * 24));
+    //   var hour = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    //   var mnts = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    //   var scds = Math.floor((distance % (1000 * 60)) / 1000);
+    //
+    //   // Output the result in an element with id="demo"
+    //   // d.getElementById("demo").innerHTML = days + " : " + hour + " : " + mnts    + " : " + scds;
+    //   d.getElementById("days").innerHTML = days;
+    //   d.getElementById("hour").innerHTML = hour;
+    //   d.getElementById("mnts").innerHTML = mnts;
+    //   d.getElementById("scds").innerHTML = scds;
+    //
+    // }, 1000);
   </script>
 	<script type="text/javascript" src="js/custom.js?v=3.2"></script>
 

@@ -513,7 +513,7 @@ body{
   display: none;
 }
 #view:not(.expired) .landingView{
-  display:none;
+  /* display:none; */
 }
 .countView{
   position: relative;
@@ -1020,6 +1020,7 @@ figure.viatecRoast p, figure.viafilRoast p{font-size:.6rem}
   padding: .2rem;
   text-transform: uppercase;
 }
+.butttonSend:disabled{cursor:not-allowed;}
 
 /* FORM LANDING PAGE */
 
