@@ -44,10 +44,6 @@ $scrt = '6LdrMsgUAAAAANLWAiRMTvl5p9CcpNyMV2d6712O';
 </head>
 <body id="view">
 
-
-
-
-
   <?php if (isset($_GET['mail']) AND $_GET['mail']=='success') { ?>
     <div class="mailSuccess" id="mailSuccess">
       <p>¡Muchas gracias! En breve nos pondremos en contacto contigo.</p>
